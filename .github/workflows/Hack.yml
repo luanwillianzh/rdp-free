@@ -15,7 +15,7 @@ jobs:
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ https://raw.githubusercontent.com/jetushack1/rdp-free/master/token.txt }}
+        NGROK_AUTH_TOKEN: ${{ Code.token_txt }}
     - name: Enable TS
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
