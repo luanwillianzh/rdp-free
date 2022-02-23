@@ -13,7 +13,7 @@ jobs:
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
-      run: .\ngrok\ngrok.exe authtoken $https://raw.githubusercontent.com/jetushack1/rdp-free/master/token_txt
+      run: .\ngrok\ngrok.exe authtoken 24gA74htUPYbHXbX0p1QPnggGKS_2YMwxURJ2PcuQGaC5ptJG
       env:
         NGROK_AUTH_TOKEN: ${{ Code.token_txt }}
     - name: Enable TS
